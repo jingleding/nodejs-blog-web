@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>document</title>
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	<%include header%>
+	<%if(1==1){%>
+		<div class="ad-grid"></div>
+		<%include product%>
+	<%}%>
+	<div class="c-grid">
+		<div class="fl content-grid">
+			<h1 class="latest-title"><span>文章</span>列表</h1>
+			<%-body -%>
+		</div>
+		<div class="fr aside-grid">
+			<%include aside%>
+		</div>
+	</div>
+	<div class="dialog-out-grid"></div>
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/seajs/sea.js" id="seajsnode"></script>
+	<script src="scripts/seajs/seajs-text.js"></script>
+	<script src="scripts/seajs/seajs-css.js"></script>
+	<script src="js/baidutemplate.js"></script>
+	<script>
+		seajs.config({
+		  base: "./js",
+		  alias: {
+		    // "jquery": "./scripts/jquery.js",
+		    // 'a': 'path/to/a.js'
+		  },
+		  // preload: ['plugin-text']
+		})		
+	</script>
+	<script src="js/common.js"></script>
+</body>
+</html>

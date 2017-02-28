@@ -1,0 +1,17 @@
+<div class="hd-block">
+	<div class="c-grid">
+		<a class="fl logo-block" href="/"><img src="/img/logo.png" alt="白开水"></a>
+		<div class="fr hd-menu">
+			<a class="cur" href="">首页</a>
+			<a href="/myblog">我的博客</a>
+			<a href="/pro">作品区</a>
+			<span class="login-register-block j-l-r-block">
+				<%if(userinfo){%>
+					您好，<a href=""><%=userinfo.nickname%></a>|<a href="/logout" class="j-logout">退出</a>
+				<%}else{%>
+				<a class="j-login-btn" href="javascript:;">登录</a>|<a class="j-register-btn" href="javascript:;">注册</a>
+				<%}%>
+			</span>
+		</div>
+	</div>
+</div>
