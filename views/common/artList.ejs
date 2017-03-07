@@ -1,5 +1,6 @@
 <%if (artList){%>
 	<%for (var i= 0; i < artList.length; i++){%>
+		<%if (i<5) {%>
 		<div class="art-list">
 			<h1><%=artList[i].title%></h1>
 			<div class="art-content">
@@ -11,6 +12,7 @@
 				<span>作者：<%=artList[i].nickname%></span>
 			</p>
 		</div>
+		<%}%>
 
 	<%}%>
 <%}%>
