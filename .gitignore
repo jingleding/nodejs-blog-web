@@ -1,0 +1,16 @@
+# Mac crap
+.DS_Store
+
+# WebStorm
+.idea/**/*
+.idea/*
+todo.md
+
+
+# output/**
+*.debug.css
+node_modules/**
+npm-debug.log
+t5s/output/**
+*.debug.js
+filemap.php

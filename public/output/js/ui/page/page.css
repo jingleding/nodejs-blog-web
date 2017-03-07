@@ -1,0 +1,33 @@
+.page-grid {
+  text-align: right;
+}
+.page-grid .page-grid-in {
+  display: inline-block;
+  border: 1px solid #f1f1f1;
+  font-size: 0px;
+  border-radius: 3px;
+}
+.page-grid span,
+.page-grid a {
+  cursor: pointer;
+  border-right: 1px solid #f1f1f1;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 28px;
+  width: 30px;
+  text-align: center;
+}
+.page-grid span.cur {
+  background: #b1b1b1;
+  color: #fff;
+}
+.page-grid .more-page {
+  display: none;
+}
+.page-grid .last-page {
+  border-right: 0px;
+}
+.page-grid .no-handle {
+  color: #d1d1d1;
+  cursor: not-allowed;
+}

@@ -1,0 +1,37 @@
+.latest-title {
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  line-height: 45px;
+  margin: 20px 0px;
+  font-size: 18px;
+}
+.latest-title span {
+  color: #ed7f13;
+}
+.art-list-box {
+  position: relative;
+}
+.art-list {
+  margin-bottom: 20px;
+}
+.art-list h1 {
+  font-size: 16px;
+}
+.art-content {
+  line-height: 22px;
+  text-indent: 2em;
+}
+.more-link {
+  text-align: right;
+}
+.more-link a {
+  color: #005ebb;
+}
+.detail-text {
+  font-size: 12px;
+  background: #f5f5f5;
+  line-height: 25px;
+  height: 25px;
+  padding-left: 10px;
+  color: #adadad;
+}

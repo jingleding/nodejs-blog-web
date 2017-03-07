@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var session = require('express-session'); 
+var moment = require('moment'); 
+var async = require('async'); 
 var app = express();
 
 // view engine setup

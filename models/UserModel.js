@@ -38,7 +38,7 @@ module.exports={
                     // res.redirect(307,'./login');  
                     // req.session.rs = rs
                     loginbean = new LoginBean();    
-                    // loginbean.id=req.body.uid;    
+                    loginbean.id=req.body.uid;    
                     loginbean.nickname = req.body['nickname'];    
                     req.session.loginbean = loginbean;
                     self.resJson(res,"注册成功！",true); 

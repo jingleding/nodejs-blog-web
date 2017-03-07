@@ -1,5 +1,5 @@
 function LoginBean(){    
     this.id;    
-    this.nicheng;    
+    this.nickname;    
 }    
 module.exports = LoginBean;

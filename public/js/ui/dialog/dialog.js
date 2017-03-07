@@ -2,7 +2,7 @@ define(function(require,exports,module){
 	var bt = baidu.template;
 	var dialogTmpl = require("./dialog.tpl");
 	bt.ESCAPE = true;
-	require("./dialog.css");
+	require("../../../output/js/ui/dialog/dialog.css");
 	var Dialog = function(opts){
 		this.init(opts);
 	}

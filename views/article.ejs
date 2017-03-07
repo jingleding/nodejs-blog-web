@@ -1,25 +1,13 @@
 <%layout ('common/layout') -%>
-<link rel="stylesheet" href="css/index.css">
-<div class="art-list">
-	<h1>程序猿请放下你的技术情结</h1>
-	<div class="art-content">
-		如果说掌握一门赖以生计的技术是技术人员要学会的第一课的话，那么我觉得技术人员要真正学会的第二课，不是技术，而是业务、交流与协作，学会关心其他工作伙伴的工作情况和进展...
+<link rel="stylesheet" href="./output/css/article.css">
+<div class="art-detail-box">
+	<h1><%=art.title%></h1>
+	<div class="art-detail-content">
+		<%=art.content%>
 	</div>	
-	<p class="more-link"><a href="">查看全文 ></a></p>
-	<p class="detail-text">
-		<span>发布时间：2017-01-01</span>
-		<span>作者：白开水</span>
-	</p>
-</div>
-<div class="art-list">
-	<h1>程序猿请放下你的技术情结</h1>
-	<div class="art-content">
-		如果说掌握一门赖以生计的技术是技术人员要学会的第一课的话，那么我觉得技术人员要真正学会的第二课，不是技术，而是业务、交流与协作，学会关心其他工作伙伴的工作情况和进展...
-	</div>	
-	<p class="more-link"><a href="">查看全文 ></a></p>
-	<p class="detail-text">
-		<span>发布时间：2017-01-01</span>
-		<span>作者：白开水</span>
+	<p class="art-detail-text">
+		<span>发布时间：<%= art.createtime%></span>
+		<span>作者：<%=art.uid%></span>
 	</p>
 </div>
 
