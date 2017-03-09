@@ -16,7 +16,7 @@ var art = {
 				success: function(rs) {
 					if (rs.success) {
 						alert(rs.msg);
-						window.location.href = "/article?id=" + rs.data.id;
+						window.location.href = "/articlelist";
 					}else{
 						alert(rs.msg);
 					}

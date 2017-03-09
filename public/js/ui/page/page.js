@@ -16,6 +16,7 @@ define(function(require,exports,module){
 			this.nextPage = ".j-next-page";
 			this.firstPage = ".j-first-page";
 			this.lastPage = ".j-last-page";
+			this.max = $(this.lastPage).data("max");
 			this.events();
 			// this.getData(1);
 		},
@@ -24,16 +25,35 @@ define(function(require,exports,module){
 			self.body.on("click", self.pageBox + " span", function() {
 				var curPage = parseInt($(this).text());
 				self.getData(curPage);
-				self.switchUi(this);
+				self.switchUi($(this));
 			});
 			self.body.on("click", self.firstPage, function() {
 				self.getData(1);
+				self.switchUi($(self.pageBox + " span").eq(0));
 			});
 			self.body.on("click", self.lastPage, function() {
-				self.getData(1);
+				self.getData(self.max);
+				self.switchUi($(self.pageBox + " span").eq(self.max-1));
 			});
-			self.body.on("click", self.lastPage, function() {
-				self.getData(1);
+			self.body.on("click", self.prevPage, function() {
+				if (!$(this).hasClass("no-handle")) {
+					var num = $(".j-page-grid span.cur").text();
+					if (num > 1) {
+						num = num-1;
+						self.getData(num);
+						self.switchUi($(".j-page-grid span.cur").prev());
+					}
+				}
+			});
+			self.body.on("click", self.nextPage, function() {
+				if (!$(this).hasClass("no-handle")) {
+					var num = $(".j-page-grid span.cur").text();
+					if (num < self.max) {
+						num = num+1;
+						self.getData(num);
+						self.switchUi($(".j-page-grid span.cur").next());
+					}
+				}
 			});
 		},
 		getData: function(num) {
@@ -56,11 +76,22 @@ define(function(require,exports,module){
 			})
 		},
 		switchUi: function(ele) {
-			if (ele.tagName == "SPAN"){
-				$(ele)
-					.addClass("cur")
-					.siblings("span")
-					.removeClass("cur");
+			var self = this;
+			ele
+				.addClass("cur")
+				.siblings("span")
+				.removeClass("cur");
+			// 当前页为第一页的时候上一步按钮制灰
+			if (ele.text() == 1) {
+				$(self.prevPage).addClass("no-handle");
+			}else{
+				$(self.prevPage).removeClass("no-handle");
+			}
+			// 当前页为最后一页的时候下一步按钮制灰
+			if (ele.text() == self.max) {
+				$(self.nextPage).addClass("no-handle");
+			}else{
+				$(self.nextPage).removeClass("no-handle");
 			}
 		}
 	}
