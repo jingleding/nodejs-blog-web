@@ -2,10 +2,11 @@
 	<div class="page-grid-in">
 		<a class="j-first-page" href="javascript:;">首页</a>
 		<a class="j-prev-page no-handle" href="javascript:;">«</a>
-		<span class="cur">1</span>
-		<span>2</span>
+		<%for(var i = 0;i < Math.ceil(artList.length/pageSize); i++){%>
+			<span class="<%if(i==0){%>cur<%}%>"><%- (i+1)%></span>
+		<%}%>
 		<a class="more-page j-more-page" href="javascript:;">⋯</a>
 		<a class="j-next-page" href="javascript:;">»</a>
-		<a class="last-page j-last-page" href="javascript:;">尾页</a>
+		<a class="last-page j-last-page" href="javascript:;" data-max="<%=Math.ceil(artList.length/pageSize)%>">尾页</a>
 	</div>
 </div>

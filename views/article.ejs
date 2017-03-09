@@ -1,13 +1,13 @@
 <%layout ('common/layout') -%>
 <link rel="stylesheet" href="./output/css/article.css">
 <div class="art-detail-box">
-	<h1><%=art.title%></h1>
+	<h1><%= art.title%></h1>
 	<div class="art-detail-content">
-		<%=art.content%>
+		<%= art.content%>
 	</div>	
 	<p class="art-detail-text">
-		<span>发布时间：<%= art.createtime%></span>
-		<span>作者：<%=art.uid%></span>
+		<span>发布时间：<%= moment(art.createtime).format('YYYY-MM-DD HH:mm:ss')%></span>
+		<span>作者：<%= art.nickname%></span>
 	</p>
 </div>
 

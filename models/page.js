@@ -20,7 +20,7 @@ module.exports = {
 	                page=1;
 	            }
 	        }
-	        pageSize = 5;
+	        pageSize = 3;
 	        pointStart = (page-1)*pageSize;
 	        count=0;
 	        countPage=0;

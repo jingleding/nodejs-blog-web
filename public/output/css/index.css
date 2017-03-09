@@ -7,6 +7,7 @@
 }
 .latest-title span {
   color: #ed7f13;
+  margin-right: 10px;
 }
 .art-list-box {
   position: relative;
@@ -23,9 +24,11 @@
 }
 .more-link {
   text-align: right;
+  margin-bottom: 5px;
 }
 .more-link a {
   color: #005ebb;
+  font-size: 12px;
 }
 .detail-text {
   font-size: 12px;
@@ -34,4 +37,12 @@
   height: 25px;
   padding-left: 10px;
   color: #adadad;
+}
+.list-link {
+  text-align: right;
+  margin-top: 10px;
+}
+.list-link a {
+  color: #005ebb;
+  font-size: 12px;
 }

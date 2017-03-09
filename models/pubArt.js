@@ -24,7 +24,7 @@ module.exports = {
                 //res.send('提问成功');
                 // console.dir("22222222222"+rs[0].aid);
                 res.json({
-                	msg: "提交成功11",
+                	msg: "提交成功",
                     // data: rs.aid,
                 	success: true
                 });
@@ -32,7 +32,7 @@ module.exports = {
             conn.release();
         });
 	},
-	getArtList: function(req, res) {
+	getArtList: function(req, res, tpl) {
 		var self = this;
 		pool = connPool();
         //从pool中获取连接(异步,取到后回调)
@@ -57,16 +57,30 @@ module.exports = {
                 // rs.createtime = moment(rs.createtime).format('yyyy-MM-dd');
 
                 loginbean = req.session.loginbean;
-			  	var model = {
+			  	model = {
 			  		userinfo: loginbean,
 			  		hasAd: 1,
+                    curMenu: "index",
 			      	artList: rs,
+                    pageSize: 3,
                     moment: moment
 			  	}  
-	  			res.render('index',model); 
+                if (tpl == 1) {
+                    model.hasAd = 0;
+                    model.curMenu = "articlelist";
+                    res.render('article-list',model);
+                }else{
+                    res.render('index',model); 
+                }
+                // return self.model;
+                // res.json(self.model)
 
             })
+            // callback(function(){
+            //     return self.model;
+            // })
             conn.release();
+                // return res.model;
             // return artList;
         });
 	},
@@ -81,7 +95,7 @@ module.exports = {
                 return;
             }
             var id = req.query["id"];
-            var listSql = 'select aid,title,content,createtime from article where aid=?';
+            var listSql = 'select aid,title,content,createtime,uid,nickname from article where aid=?';
             var param = [id];
             conn.query(listSql,param,function(err,rs){
                 if(err){
@@ -98,6 +112,7 @@ module.exports = {
                 var model = {
                     userinfo: loginbean,
                     hasAd: 0,
+                    curMenu: "articlelist",
                     art: rs[0],
                     moment: moment
                 }  
