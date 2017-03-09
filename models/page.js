@@ -1,6 +1,6 @@
 // 分页逻辑
 var connPool=require("./ConnPool.js");
-var LoginBean = require("../jsbean/LoginBean"); 
+var LoginBean = require("./LoginBean.js"); 
 var async = require('async'); 
 
 module.exports = {

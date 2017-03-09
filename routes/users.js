@@ -32,8 +32,4 @@ router.all('/login', function(req, res, next) {
   // res.send(nickname);
   
 });
-// 分页
-router.get('/page', function(req, res, next) {
-
-})
 module.exports = router;
