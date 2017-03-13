@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var pubArt = require('../models/pubArt.js');
-var page = require("../models/page.js");
+var pubArt = require('../models/PubArt.js');
+var page = require("../models/Page.js");
 var moment = require('moment'); 
 
 /* GET home page. */
