@@ -3,7 +3,7 @@ module.exports = (function(){
 	var pool=mysql.createPool({
 		host:'localhost',
 		user:'root',
-		password:'xixi',
+		password:'ngjcltj5yr',
 		database:'blog',
 		port:'3306'
 	});
