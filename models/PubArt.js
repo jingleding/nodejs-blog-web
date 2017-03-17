@@ -46,8 +46,8 @@ module.exports = {
             var param = [];
             conn.query(listSql,param,function(err,rs){
                 if(err){
-                    //console.log('insert err:',err.message);
-                    rs.send("数据库错误,错误原因:"+err.message);
+                    console.log('insert err1111111:',err.message);
+                    res.send("数据库错误,错误原因:"+err.message);
                     return;
                 }
                 //console.log(rs.length);
