@@ -7,7 +7,7 @@ module.exports = (function(){
 		database:'blog',
 		port:'3306'
 	});
-	// console.log("pool"+pool);
+	console.log("pool11111"+pool);
 	pool.on('connection', function(connection) {  
         connection.query('SET SESSION auto_increment_increment=1'); 
         this.flag=false; 
