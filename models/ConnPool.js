@@ -4,7 +4,7 @@ module.exports = (function(){
 		host:'localhost',
 		user:'root',
 		password:'ngjcltj5yr',
-		// database:'blog',
+		database:'blog',
 		port:'3306'
 	});
 	// console.log("pool"+pool);
